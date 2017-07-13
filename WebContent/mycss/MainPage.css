@@ -1,0 +1,212 @@
+.tbanner-text{
+position:absolute;
+margin-top:65px;
+margin-left:160px;
+font-family:algerian;
+color:red;
+font-size:140px;
+transform-origin:center;
+text-shadow:3px 3px 3px orange,6px 6px 4px blue;
+animation:3s ls1 infinite;
+z-index:2;
+}
+.tmain-figure{
+z-index:30;
+}
+#p2{
+background:yellow;
+fill:blue;
+}
+@keyframes ls1{
+25%{
+//transform:rotate
+text-shadow:3px 3px 3px yellow,6px 7px 5px red;
+//transform:rotate(10deg);
+}
+50%{
+color:blue;
+text-shadow:3px 4px 3px orange,7px 5px 11px orange;
+//transform:rotate(0deg);
+}
+75%{
+transform:translateY(-20px);
+text-shadow:1px 3px 3px blue,6px 8px 3px red;
+//transform:rotate(-10deg);
+}
+}
+#p1{
+	animation:2s p2anim 3s infinite;
+}
+#p2{
+	animation:1.3s p2anim infinite;
+}
+#p3{
+	animation:1.9s p2anim 2s infinite;
+}
+#p4{
+	animation:1s p2anim infinite;
+}
+#p5{
+	animation:2.5s p2anim 2.3s infinite;
+}
+@keyframes p2anim{
+	20%{
+
+	fill:	rgb(255,99,71);
+	}
+	40%{
+
+	fill:	rgb(255,165,0);
+	}
+	60%{
+
+	fill:deeppink;
+	}
+	80%{
+
+	fill:	rgb(255,69,0);
+	}
+	
+}
+.tparent-main-div{
+	
+	width:calc(100%-5px);
+	height:calc(100%-5px);
+	background:radial-gradient(circle,rgb(255,192,203),	rgb(165,42,42));
+}
+.tbanner-text1{
+	position:absolute;
+	margin-left:50px;
+	margin-top:50px;
+	font-size:27px;
+	color:yellow;
+	font-style:bold;
+	font-family:italic;
+	letter-spacing:2px;
+	
+}
+
+.tMainPageLink{
+	
+     position:absolute;
+	margin-top:450px;
+	margin-left:150px;
+	//backface-visibility: hidden;
+	//transform:rotateX(60deg) rotateY(30deg) rotateZ(60deg);
+	//animation:3s linkrotate infinite;
+	
+}
+.tlink1{
+	margin-left:10px;
+
+	border-radius:50%;
+	background:blue;
+	
+}
+@keyframes linkrotate{
+	from{
+	transform:rotateX(0deg) rotateY(0deg);
+	}
+	to{
+	transform:rotateX(360deg) rotateY(360deg);
+	}
+}
+.tlink{
+	text-align:center;
+	color:white;
+	font-size:30px;
+	padding-top:60px;
+	display:inline-block;;
+	position:relative;
+	margin-bottom:5px;
+	margin-left:50px;
+	width:140px;
+	height:140px;
+	border-radius:50%;
+	background:radial-gradient(circle,blue,red);
+    cursor:pointer;
+}
+.tlink:hover{
+	background:radial-gradient(circle,black,green);
+	color:yellow;
+	text-shadow:1px 1px black,2px 2px green;
+}
+a{
+	
+	text-decoration:none;
+}
+.tpop-up-outer
+  { 
+  position:absolute;
+  display:none;
+  padding-left:300px;
+  border-radius:10px;
+ // padding-top:30px;
+  top:0px;
+  left:0px;
+  z-index:100;
+}
+.tpop-up-inner
+{
+	padding:10px;
+	height:70px;
+	background:red;
+	color:white;
+	font-weight:500;
+	font-size:22px;
+}
+.tpop-up-body
+{
+	border-radius:10px;
+	border:3px red solid;
+	box-shadow:15px 15px 24px black;
+	width:600px;
+	background:white;
+	height:auto;
+}
+.tpop-up-content
+{
+	margin-top:20px;
+}
+
+
+
+
+.tclose1{
+	margin-right:-20px;
+	margin-top:-20px;
+	padding:15px;
+	text-align:center;
+	width:55px;
+	height:55px;
+	float:right;
+	border-radius:50%;
+	font-style:bold;
+	font-size:25px;
+	text-shadow:2px 2px yellow;
+	color:red;
+	background:radial-gradient(circle,white,black);
+}
+.tclose1:hover,.tclose1:focus{
+	
+	
+	text-shadow:2px 2px red;
+	cursor: pointer;
+	transform:1s all ease-in;
+	color:yellow;
+	background:radial-gradient(circle,black,white);
+	 
+}
+.padding-signup{
+	padding-top:50px;
+}
+.padding-signin{
+	
+	padding-top:200px;
+}
+
+
+.dev-head{
+	
+	font-size:20px;
+}

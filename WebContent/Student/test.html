@@ -1,0 +1,130 @@
+<html>
+<head>
+
+<title>
+QuizSphere
+</title>
+
+<script src="../AngularJs/angular.min.js"></script>
+<script src="../css/jquery.min.js"> </script>
+<link rel="stylesheet" href="../mycss/MainPage.css"/>
+<script src="../js/Invalid.js"> </script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var i=0;
+	$(".tclose1").click(function(){
+		if(i==0)
+			{
+		$(".tpop-up-outer").slideUp(700);
+		i=1;
+			}
+		
+		else
+			{
+			$(".tpop-up-outer").fadeOut(1500);
+			i=0;
+			}
+	});
+	
+	
+	$(".tsignin").click(function(){
+		$(".tpop-up-inner").html("<h3>Sign In Form</h3>");
+		$(".tpop-up-outer").removeClass("padding-signup").removeClass("tdpop-up-body").addClass("padding-signin").hide(function(){
+			$.ajax({
+				url: "StuLogin.jsp",
+				type: "POST",
+				success: function(data){
+					$(".tpop-up-content").html(data);
+				}
+			});
+			}).fadeIn();
+			
+	});
+	
+	
+	$(".tsignup").click(function(){
+		//$(".pop-up-outer").
+		$(".tpop-up-inner").html("<h3>Sign Up Form</h3>");
+		$(".tpop-up-outer").removeClass("padding-signin").removeClass("tdpop-up-body").addClass("padding-signup").hide(function(){
+			$.ajax({
+				url: "StuSignUp.jsp",
+				type: "POST",
+				success: function(data){
+					$(".tpop-up-content").html(data);
+				}
+			});
+			}).fadeIn();
+			
+	});
+	
+	
+	
+	
+	
+
+	$(".tdeveloper").click(function(){
+		//$(".pop-up-outer").
+		$(".tpop-up-inner").html("<h3>About Developer</h3>");
+		$(".tpop-up-outer").removeClass("padding-signup").addClass("padding-signin").hide(function(){
+			$.ajax({
+				url: "Developer.jsp",
+				type: "POST",
+				success: function(data){
+					$(".tpop-up-content").html(data);
+				}
+			});
+			}).fadeIn();
+			
+	});
+
+});
+</script>
+</head>
+
+
+<body>
+<div class="tparent-main-div">
+<center><div class="tbanner-text1">Welcome all uesrs to the Quiz leading Web Application</div></center>
+<div class="tbanner-text">QUIZSPHERE</div>
+<div class="tmain-figure">
+<div class="tMainPageLink">
+<div class="tlink1 tlink tdeveloper">Developer</div>
+<div class="tlink2 tlink tsignup">Sign Up</div>
+<div class="tlink3 tlink tsignin">Sign In</div>
+<div class="tlink4 tlink tfaculty">Faculty</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="560px">
+
+ <path id="p1" d="M650,450 a100,100 0 1,0 -200,0" fill="#E79A16" />
+ <path id="p2" d="M500,450 v-90 h100 v90 h-100 z" fill="red" />
+ <path id="p3" d="M525 360 v-110 h50 v110 h-50 z" fill="green" />
+ <path id="p4" d="M535 250 L 535,200 550,250 z" fill="brown" />
+ <path id="p5" d="M550 250 L 565,200 565,250 z" fill="blue" />
+<!--   <path id="p6" d="M545 250 L 550,175 555 250 z" fill="orange" />
+ <circle cx="550" cy="175" r="5" fill="blue">
+ -->
+ 
+ <animateColor to="red" attributeName="fill" begin="1s" dur="3s" fill="red" repeatCount="indefinite" />
+  </circle>
+</svg>
+</div>
+</div>
+
+<center>
+<div class="tpop-up-outer">
+<div class="tpop-up-body tdpop-up-body">
+<div  class="tclose1">
+<span>X</span>
+</div>
+<div class="tpop-up-inner">
+</div>
+<div class="tpop-up-content  tdpop-up-body">
+</div>
+</div>
+</div>
+</center>
+</body>
+
+</html>
